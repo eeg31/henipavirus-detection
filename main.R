@@ -8,25 +8,32 @@
 #
 #*******************************************************************************
 
+# Load dependencies ************************************************************
+
 require(dplyr)
 require(tidyr)
 require(ggplot2)
 require(cowplot)
 require(scales)
 
+# Set seed for reproducibility *************************************************
+
 set.seed(06042020)
 
-# Settings (which parts of the analysis to run)
+# Settings (which parts of the analysis to run) ********************************
 
 from_scratch <- TRUE
 fit_models <- TRUE 
 
-# Additional control parameters and constants
+# Additional control parameters and constants **********************************
 
-nsim <- 10000     #number of simulations
-max_gen <- 50       #maximum number of generations for which to simulate an outbreak
-max_index <- 20
+nsim <- 10000     # number of Monte Carlo simulations
+max_gen <- 1000   # maximum number of generations for which to simulate an outbreak
+max_index <- 30   # maximum number of index cases in a single outbreak
+if(from_scratch) fit_models <- TRUE  # fix conflicting settings
 
+# Fit a negative binomial distribution to observed frequencies, 
+# with or without a fixed mean *************************************************
 
 fit_nbinom <- function(data, R0=NULL){
 
@@ -45,18 +52,19 @@ fit_nbinom <- function(data, R0=NULL){
 }
 
 
-#setup and data loading*********************************************************
-if(from_scratch) fit_models <- TRUE
+# Load data ********************************************************************
 
-# LOAD DATA
+# all recorded bat-to-human Nipah virus clusters in South Asia up to April 2020
 nipah <- rio::import('data/henipa/henipa-outbreaks.csv') %>%
          as_tibble %>%
          filter(virus=='NiV-B') #exclude outbreaks outside South Asia
 
+# all recorded bat-to-horse Hendra virus clusters in Australia up to April 2020
 hendra <- rio::import('data/henipa/henipa-outbreaks.csv') %>%
           as_tibble %>%
           filter(virus=='HeV')
 
+# all recorded bat-to-horse Hendra virus clusters in Australia up to April 2020
 nipah_dist <- rio::import('data/henipa/nipah-transmissions.xlsx') %>%
               as_tibble %>%
               mutate(count_min=count,
