@@ -1,0 +1,93 @@
+﻿virus,host,year_origin,month_origin,year_end,month_end,country_origin,location_origin,location_extent,est_indeces,min_indeces,max_indeces,index_notes,cases,deaths,source_outbreak,source_report
+NiV-M,human,1998,Sep,1999,Jun,Malaysia,"Ipoh, Perak",Malaysia and Singapore,246,235,255,spillover via pigs; index cases estimated as proportion of cases with pig exposure,276,106,Chua2000,"Chua2000, Parashar2000"
+NiV-B,human,2001,Feb,2001,Feb,India,Siliguri,Siliguri,11,1,11,primarily nosocomial transmission but initial cluster was 11 patients; may have had a single source,66,45,WHO-SEARO (as of 24/5/2018),Chadha2006
+NiV-B,human,2001,Apr,2001,May,Bangladesh,Chandpur village,Meherpur,1,1,6,likely to have been a single spillover due to clustering,13,9,WHO-SEARO (as of 24/5/2018),Hsu2004
+NiV-B,human,2003,Jan,2003,Jan,Bangladesh,East Chalksita and Biljoania villages,Naogaon,8,2,8,initial cluster of 8 cases - could have come from some unknown index case but all 8 have shared exposure,12,8,WHO-SEARO (as of 24/5/2018),Hsu2004
+NiV-B,human,2004,Jan,2004,Feb,Bangladesh,Goalanda sub-district,"Rajbari, Joypurhat, Naogaon, Natore, Gopalganj, Manikganj, and Dhaka districts",9,9,31,"likely to have been multiple spillovers due to clustering in both space and time, geographical extent, and possible common source ",31,23,WHO-SEARO (as of 24/5/2018),icddrb2004a
+NiV-B,human,2004,Apr,2004,May,Bangladesh,Faridpur district,Faridpur,3,1,3,contact tracing suggests single index case for 34/36 cases. 2 of the cases have no known contact with infected individuals and were not friends/family/followers of the previous cases ,36,27,WHO-SEARO (as of 24/5/2018),Gurley2007
+NiV-B,human,2005,Jan,2005,Mar,Bangladesh,Basail upazila,Tangail,12,7,12,initial tightly cluster 7 cases with shared exposure; subsequent cases of ambiguous origin,12,11,WHO-SEARO (as of 24/5/2018),Luby2006
+NiV-B,human,2007,Jan,2007,Feb,Bangladesh,Haripur upazila,Thakurgaon,1,1,1,all later cases had close physical contact with the first case and were separated by ~1 week,7,3,WHO-SEARO (as of 24/5/2018),"Homaira2010a, icddrb2007"
+NiV-B,human,2007,Mar,2007,Apr,Bangladesh,Sadar upazila,Kushtia,1,1,3,strong evidence for single index but 2 secondary cases didn’t report close contact so possibly 3 (but unlikely as still attended an event with them),8,5,WHO-SEARO (as of 24/5/2018),"Homaira2010b, icddrb2007"
+NiV-B,human,2007,Apr,2007,Apr,Bangladesh,"Pabna, Natore, and Naogaon districts","Pabna, Natore, and Naogaon",2,1,3,no additional information available,3,1,WHO-SEARO (as of 24/5/2018),NA
+NiV-B,human,2007,Apr,2007,Apr,India,Belechuapara village,Nadia,1,1,1,single index case with date palm sap exposure; subsequent cases all contacts,5,5,WHO-SEARO (as of 24/5/2018),Arankalle2011
+NiV-B,human,2008,Feb,2008,Feb,Bangladesh,Manikgonj district,Manikgonj,4,1,4,most exposed to date palm sap within tight time frame,4,4,WHO-SEARO (as of 24/5/2018),"Rahman2012, icddrb2008"
+NiV-B,human,2008,Apr,2008,Apr,Bangladesh,Rajbari district,Rajbari,6,1,7,most exposed to date palm sap within tight time frame,7,5,WHO-SEARO (as of 24/5/2018),"Rahman2012, icddrb2008"
+NiV-B,human,2009,Jan,2009,Jan,Bangladesh,"Gaibandha, Rangpur, and Nilphamari districts","Gaibandha, Rangpur, and Nilphamari",2,1,3,no additional information available,3,0,WHO-SEARO (as of 24/5/2018),NA
+NiV-B,human,2009,Jan,2009,Jan,Bangladesh,Rajbari district,Rajbari,1,1,1,no additional information available,1,1,WHO-SEARO (as of 24/5/2018),NA
+NiV-B,human,2010,Feb,2010,Mar,Bangladesh,"Faridpur, Rajbari, Gopalgonj districts","Faridpur, Rajbari, Gopalgonj",7,7,8,sporadic cases with shared exposure to date palm sap,8,7,WHO-SEARO (as of 24/5/2018),Sazzad2013
+NiV-B,human,2010,Feb,2010,Mar,Bangladesh,Faridpur district,Faridpur,4,4,5,one ambiguous exposure (date palm and spouse infection),8,7,WHO-SEARO (as of 24/5/2018),Sazzad2013
+NiV-B,human,2010,Jan,2010,Jan,Bangladesh,Kurigram,Kurigram,1,1,1,no additional information available,1,1,WHO-SEARO (as of 24/5/2018),NA
+NiV-B,human,2010,Dec,2011,Mar,Bangladesh,Dinjapur district,Dinjapur,2,1,2,two confirmed sap exposure; three with only case contact (including suspected corpse-to-human transmission),5,4,WHO-SEARO (as of 24/5/2018),Chakraborty2016
+NiV-B,human,2010,Dec,2011,Mar,Bangladesh,Rangpur district,Rangpur,4,3,5,three reported date palm sap exposure; three reported case contact; two reported neither,8,5,WHO-SEARO (as of 24/5/2018),Chakraborty2016
+NiV-B,human,2010,Dec,2011,Mar,Bangladesh,Hatibandha sub-district,Lalmohirhat,14,5,22,14 cases reported date palm sap exposure; some possible nosocomial transmission via a nurse but little contact tracing available,22,21,WHO-SEARO (as of 24/5/2018),"icddrb2011, Chakraborty2016"
+NiV-B,human,2010,Dec,2011,Mar,Bangladesh,Rajbari district,Rajbari,2,1,2,both drank sap; one had onset 4 days after onset of illness/contact with other,2,2,WHO-SEARO (as of 24/5/2018),Chakraborty2016
+NiV-B,human,2010,Dec,2011,Mar,Bangladesh,Comilla distric,Comilla,1,1,1,consumed date palm sap; reported in Dhaka,1,1,WHO-SEARO (as of 24/5/2018),Chakraborty2016
+NiV-B,human,2010,Dec,2011,Mar,Bangladesh,"Nilphamari, Faridpur districts","Nilphamari, Faridpur",5,5,5,"described only as ""isolated cases;"" four had confirmed date palm sap exposure",5,5,WHO-SEARO (as of 24/5/2018),Chakraborty2016
+NiV-B,human,2012,Jan,2012,Jan,Bangladesh,Joypurhat district,Joypurhat,7,2,12,minimal information available,12,10,WHO-SEARO (as of 24/5/2018),IEDCR2012
+NiV-B,human,2013,Jan,2013,Apr,Bangladesh,"Pabna, Natore, Naogaon, Gaibandha, Manikganj districts","Pabna, Natore, Naogaon, Gaibandha, Manikganj",13.5,1,24,no additional information available,24,21,WHO-SEARO (as of 24/5/2018),NA
+NiV-B,human,2014,Jan,2014,Feb,Bangladesh,"Faridpur, Rajshahi, and Rangpur districts",13 districts,9,3,15,at least three instances of person-to-person transmission,18,9,WHO-SEARO (as of 24/5/2018),"Hassan2018, Islam2016"
+NiV-M,human,2014,Mar,2014,May,Philippines,Tinalon,"Tinalon, Midtungok, Isulan",5.5,2,9,spillover via horses,17,9,Ching2015,Ching2015
+NiV-B,human,2015,Jan,2015,Feb,Bangladesh,"Nilphamari, Ponchoghor, Faridpur, Magura, Naugaon, Rajbari districts","Nilphamari, Ponchoghor, Faridpur, Magura, Naugaon, Rajbari",7.5,6,9,no additional information available,9,6,WHO-SEARO (as of 24/5/2018),NA
+NiV-B,human,2018,May,2018,May,India,"Kozhikode District, Kerala",Kerala,1,1,1,suspected single index case with subsequent community and nosocomial transmission,23,21,Arunkumar2018,Arunkumar2018
+HeV,horse,1994,Sep,1994,Sep,Australia,"Hendra, Brisbane","Hendra, Brisbane",1,1,1,,20,20,Queensland_government,
+HeV,horse,1994,Aug,1994,Aug,Australia,Mackay,Mackay,1,1,2,,2,2,Queensland_government,
+HeV,horse,1999,Jan,1999,Jan,Australia,Cairns,Cairns,1,1,1,,1,1,Queensland_government,
+HeV,horse,2004,Oct,2004,Oct,Australia,Cairns ,Cairns ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2004,Dec,2004,Dec,Australia,Townsville,Townsville,1,1,1,,1,1,Queensland_government,
+HeV,horse,2006,Jun,2006,Jun,Australia,Peachester,Peachester,1,1,1,,1,1,Queensland_government,
+HeV,horse,2006,Oct,2006,Oct,Australia,Murwillimbah,Murwillimbah,1,1,1,,1,1,Queensland_government,
+HeV,horse,2007,Jun,2007,Jun,Australia,Peachester ,Peachester ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2007,Jul,2007,Jul,Australia,Cairns ,Cairns ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2008,Jun,2008,Jun,Australia,Redlands,Redlands,1,1,5,,8,8,Queensland_government,Field2010
+HeV,horse,2008,Jul,2008,Jul,Australia,Proserpine,Proserpine,1,1,4,,4,4,Queensland_government,
+HeV,horse,2009,Jul,2009,Jul,Australia,Cawarral ,Cawarral ,1,1,4,,4,4,Queensland_government,
+HeV,horse,2009,Sep,2009,Sep,Australia,Bowen,Bowen,2,1,2,,2,2,Queensland_government,
+HeV,horse,2010,May,2010,May,Australia,Tewantin ,Tewantin ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jun,2011,Jun,Australia,Beaudesert ,Beaudesert ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jun,2011,Jun,Australia,Boonah,Boonah,1,1,3,,3,3,Queensland_government,
+HeV,horse,2011,Jun,2011,Jun,Australia,Logan,Logan,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jun,2011,Jun,Australia,Wollongbar,Wollongbar,1,1,2,,2,2,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Park Ridge ,Park Ridge ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Macksville,Macksville,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Kuranda,Kuranda,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Lismore,Lismore,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Hervey Bay,Hervey Bay,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Boondall,Boondall,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Chinchilla,Chinchilla,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Jul,2011,Jul,Australia,Mullumbimby,Mullumbimby,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Aug,2011,Aug,Australia,Ballina,Ballina,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Aug,2011,Aug,Australia,South Ballina,South Ballina,2,1,2,,2,2,Queensland_government,
+HeV,horse,2011,Aug,2011,Aug,Australia,Mullumbimby,Mullumbimby,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Aug,2011,Aug,Australia,Gold Coast Hinterland ,Gold Coast Hinterland ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Aug,2011,Aug,Australia,North Ballina ,North Ballina ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2011,Oct,2011,Oct,Australia,Beachmere,Beachmere,1,1,2,,3,3,Queensland_government,
+HeV,horse,2012,Jan,2012,Jan,Australia,Townsville,Townsville,1,1,1,,1,1,Queensland_government,
+HeV,horse,2012,May,2012,May,Australia,Rockhampton,Rockhampton,1,1,1,,1,1,Queensland_government,
+HeV,horse,2012,May,2012,May,Australia,Ingham,Ingham,1,1,1,,1,1,Queensland_government,
+HeV,horse,2012,Jun,2012,Jun,Australia,Mackay,Mackay,1,1,1,,1,1,Queensland_government,
+HeV,horse,2012,Jul,2012,Jul,Australia,Rockhampton,Rockhampton,1,1,3,,3,3,Queensland_government,
+HeV,horse,2012,Jul,2012,Jul,Australia,Cairns ,Cairns ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2012,Sep,2012,Sep,Australia,Port Douglas,Port Douglas,1,1,1,,1,1,Queensland_government,
+HeV,horse,2012,Oct,2012,Oct,Australia,Ingham,Ingham,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jan,2013,Jan,Australia,Mackay,Mackay,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Feb,2013,Feb,Australia,Atherton Tablelands,Atherton Tablelands,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jun,2013,Jun,Australia,Macksville ,Macksville ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jun,2013,Jun,Australia,Brisbane Valley,Brisbane Valley,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jul,2013,Jul,Australia,Gold Coast Hinterland ,Gold Coast Hinterland ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jul,2013,Jul,Australia,Macksville,Macksville,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jul,2013,Jul,Australia,Kempsey,Kempsey,1,1,1,,1,1,Queensland_government,
+HeV,horse,2013,Jul,2013,Jul,Australia,Kempsey,Kempsey,1,1,1,,1,1,Queensland_government,
+HeV,horse,2014,Mar,2014,Mar,Australia,Bundaberg,Bundaberg,1,1,1,,1,1,Queensland_government,
+HeV,horse,2014,Jun,2014,Jun,Australia,Beenleigh ,Beenleigh ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2014,Jun,2014,Jun,Australia,Murwillimbah,Murwillimbah,1,1,1,,1,1,Queensland_government,
+HeV,horse,2014,Jul,2014,Jul,Australia,Gladstone,Gladstone,1,1,1,,1,1,Queensland_government,
+HeV,horse,2015,Jun,2015,Jun,Australia,Murwillimbah,Murwillimbah,1,1,1,,1,1,Queensland_government,
+HeV,horse,2015,Jul,2015,Jul,Australia,Atherton Tablelands,Atherton Tablelands,1,1,1,,1,1,Queensland_government,
+HeV,horse,2015,Sep,2015,Sep,Australia,Lismore,Lismore,1,1,1,,1,1,Queensland_government,
+HeV,horse,2016,Dec,2016,Dec,Australia,Casino ,Casino ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2017,May,2017,May,Australia,Gold Coast Hinterland ,Gold Coast Hinterland ,1,1,1,,1,1,Queensland_government,
+HeV,horse,2017,Jul,2017,Jul,Australia,Lismore,Lismore,1,1,1,,1,1,Queensland_government,
+HeV,horse,2017,Aug,2017,Aug,Australia,Murwillimbah,Murwillimbah,1,1,1,,1,1,Queensland_government,
+HeV,horse,2017,Aug,2017,Aug,Australia,Lismore,Lismore,1,1,1,,1,1,Queensland_government,
+HeV,horse,2018,Sep,2018,Sep,Australia,Tweed Heads,Tweed Heads,1,1,1,,1,1,Queensland_government,
+HeV,horse,2019,Jun,2019,Jun,Australia,Upper Hunter Valley,Upper Hunter Valley,1,1,1,,1,1,Queensland_government,
