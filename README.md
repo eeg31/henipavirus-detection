@@ -1,7 +1,7 @@
 # henipavirus-detection
 
 code for the analysis in EE Glennon, N John, AJ Peel, & O Restif 
-(2020), "Spillover detection of henipaviruses in people and livestock," 2020.
+(2020), "Spillover detection of henipaviruses in people and livestock."
     
 This repository contains an R script, main.R with options to reproduce the 
 analysis in full or to reproduce figures only. The data folder also includes 
