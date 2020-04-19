@@ -23,9 +23,9 @@ set.seed(06042020)
 
 # Settings (which parts of the analysis to run) ********************************
 
-from_scratch <- FALSE
-simulate_outbreaks <- FALSE
-fit_models <- FALSE
+from_scratch <- TRUE
+simulate_outbreaks <- TRUE
+fit_models <- TRUE
 
 # Additional control parameters and constants **********************************
 
