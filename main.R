@@ -23,9 +23,9 @@ set.seed(06042020)
 
 # Settings (which parts of the analysis to run) ********************************
 
-from_scratch <- TRUE
-simulate_outbreaks <- TRUE
-fit_models <- TRUE
+from_scratch <- FALSE
+simulate_outbreaks <- FALSE
+fit_models <- FALSE
 
 # Additional control parameters and constants **********************************
 
@@ -499,14 +499,27 @@ g2 <- ggplot(sample_dists_NiV_plot) +
         
 cowplot::plot_grid(g1, g2, nrow=2)
 print(NiV_posterior[1,])
-print(sum(NiV_counts$observed/c(NiV_posterior$p50, 
-                          rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))))
-print(sum(NiV_counts$observed/c(NiV_posterior$p25, 
-                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))))
-print(sum(NiV_counts$observed/c(NiV_posterior$p75, 
-                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))))
-print(sum(NiV_counts$observed))
 
+mean_index <- mean(filter(sims, virus=='NiV')$index)
+obs <- sum(NiV_counts$observed)
+
+print(sum(NiV_counts$observed/c(NiV_posterior$p50, 
+                          rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - obs) 
+print(sum(NiV_counts$observed/c(NiV_posterior$p25, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - obs)
+print(sum(NiV_counts$observed/c(NiV_posterior$p75, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - obs)
+
+
+print(mean_index*sum(NiV_counts$observed/c(NiV_posterior$p50, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - 
+        obs*mean_index)
+print(mean_index*sum(NiV_counts$observed/c(NiV_posterior$p25, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - 
+        obs*mean_index)
+print(mean_index*sum(NiV_counts$observed/c(NiV_posterior$p75, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - 
+        obs*mean_index)
 
 lik_surface_HeV <- as_tibble(expand_grid(alpha=seq(0,3,.001),
                                          beta=seq(-25,100,0.1))) %>%
