@@ -23,9 +23,9 @@ set.seed(06042020)
 
 # Settings (which parts of the analysis to run) ********************************
 
-from_scratch <- FALSE
-simulate_outbreaks <- FALSE
-fit_models <- FALSE
+from_scratch <- TRUE
+simulate_outbreaks <- TRUE
+fit_models <- TRUE
 
 # Additional control parameters and constants **********************************
 
@@ -34,8 +34,8 @@ max_gen <- 1000   # maximum number of generations for which to simulate an outbr
 max_index <- 30   # maximum number of index cases in a single outbreak
 
 if(from_scratch) {
-  fit_models <- FALSE         # fix conflicting settings
-  simulate_outbreaks <- FALSE # fix conflicting settings
+  fit_models <- TRUE         # fix conflicting settings
+  simulate_outbreaks <- TRUE # fix conflicting settings
 }
 
 # Fit a negative binomial distribution to observed frequencies, 
@@ -396,7 +396,8 @@ if(fit_models){
   load(file.path('results', paste('hendra_results-', nsim, '.rda', sep="")))
 }
 
-
+# fit an observation function to observed and expected outbreak size distributions
+# OR estimate likelihood for a given set of observation parameters (alpha, beta)
 fit_observation <- function(observed, expected, alpha=NULL, beta=NULL, tol=1e-300){
   
   expected <- expected[1:length(observed)]
@@ -417,6 +418,7 @@ fit_observation <- function(observed, expected, alpha=NULL, beta=NULL, tol=1e-30
   optim(par=c(alpha=5, beta=0.5), nlik)
 }
 
+# gridded likelihood surface (for visualisation)
 lik_surface_NiV <- as_tibble(expand_grid(alpha=seq(0,10,.01),
                                          beta=seq(-20,20,0.01))) %>%
                    mutate(nloglik = purrr::map2_dbl(alpha, beta, function(a, b){
@@ -429,6 +431,7 @@ lik_surface_NiV <- as_tibble(expand_grid(alpha=seq(0,10,.01),
                      id=1:nrow(.)
                    )
 
+# get LH sample of observation parameters and calculate likelihoods
 lhs <- lhs::randomLHS(n=nsim, k=2)
 NiV_posterior <- tibble(alpha=qunif(p=lhs[,1], min=0, max=10),
                         beta=qunif(p=lhs[,2], min=-20, max=20)) %>%
@@ -442,7 +445,7 @@ NiV_posterior <- tibble(alpha=qunif(p=lhs[,1], min=0, max=10),
   id=1:nrow(.)
   ) 
 
-# resample
+# resample according to likelihood
 NiV_posterior <- NiV_posterior[sample(NiV_posterior$id, size=nsim, 
                                       prob=NiV_posterior$weight, replace=TRUE), ] %>%
                  expand_grid(size=1:20) %>%
@@ -477,7 +480,8 @@ sample_dists_NiV_plot <- tibble(id = sample(lik_surface_NiV$id, size=nsim, prob=
                 min=min(prob),
                 max=max(prob))
 
-  
+# main figure: Nipah virus  
+
 g1 <- ggplot(lik_surface_NiV)+
       geom_raster(aes(x=alpha, y=beta, fill=weight))+
       theme_classic()+
@@ -503,6 +507,7 @@ print(NiV_posterior[1,])
 mean_index <- mean(filter(sims, virus=='NiV')$index)
 obs <- sum(NiV_counts$observed)
 
+# estimated undetected NiV case clusters
 print(sum(NiV_counts$observed/c(NiV_posterior$p50, 
                           rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - obs) 
 print(sum(NiV_counts$observed/c(NiV_posterior$p25, 
@@ -510,7 +515,7 @@ print(sum(NiV_counts$observed/c(NiV_posterior$p25,
 print(sum(NiV_counts$observed/c(NiV_posterior$p75, 
                                 rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - obs)
 
-
+# esimtated undetected NiV spillovers
 print(mean_index*sum(NiV_counts$observed/c(NiV_posterior$p50, 
                                 rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - 
         obs*mean_index)
@@ -521,6 +526,7 @@ print(mean_index*sum(NiV_counts$observed/c(NiV_posterior$p75,
                                 rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))) - 
         obs*mean_index)
 
+# gridded likelihood surface (for visualisation)
 lik_surface_HeV <- as_tibble(expand_grid(alpha=seq(0,3,.001),
                                          beta=seq(-25,100,0.1))) %>%
   mutate(nloglik = purrr::map2_dbl(alpha, beta, function(a, b){
@@ -550,6 +556,7 @@ sample_dists_HeV_vis <- tibble(id = sample(lik_surface_HeV$id, size=nsim, prob=l
             min=min(prob),
             max=max(prob))
 
+# LH sample of observation functions; calculate corresponding likelihoods
 HeV_posterior <- tibble(alpha=qunif(p=lhs[,1], min=0, max=10),
                         beta=qunif(p=lhs[,2], min=-20, max=20)) %>%
   mutate(nloglik = purrr::map2_dbl(alpha, beta, function(a, b){
@@ -562,7 +569,7 @@ HeV_posterior <- tibble(alpha=qunif(p=lhs[,1], min=0, max=10),
   id=1:nrow(.)
   ) 
 
-# resample
+# resample according to likelihood
 HeV_posterior <- HeV_posterior[sample(HeV_posterior$id, size=nsim, 
                                       prob=HeV_posterior$weight, replace=TRUE), ] %>%
   expand_grid(size=1:20) %>%
@@ -580,6 +587,8 @@ HeV_posterior <- HeV_posterior[sample(HeV_posterior$id, size=nsim,
             min=min(prob),
             max=max(prob))
 print(HeV_posterior[1,])
+
+# main figure: Hendra virus
 
 g3 <- ggplot(lik_surface_HeV)+
   geom_raster(aes(x=alpha, y=beta, fill=weight))+
