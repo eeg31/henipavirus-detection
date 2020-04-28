@@ -165,6 +165,13 @@ g1 <- ggplot(lik_surface)+
   scale_y_continuous('k')+
   scale_fill_viridis_c('relative likelihood', option='A')
 
+plot_data <- tibble(size=1:max_index) %>%
+  mutate(count=purrr::map_int(size, function(i){
+    sum(d+1==i)
+  }),
+  count_scaled=count/sum(count)
+  )
+
 g2 <- ggplot(sample_dists) +
   geom_segment(aes(x=size, xend=size, group=size, y=min, yend=max), 
                alpha=0.5, lwd=1) +
@@ -173,6 +180,8 @@ g2 <- ggplot(sample_dists) +
   geom_segment(aes(x=size, xend=size, group=size, y=p75, yend=p25), 
                alpha=0.5, lwd=4) +
   geom_point(aes(x=size, y=p50), size=3) +
+  geom_line(aes(x=size, y=count_scaled), data=plot_data,
+            color=viridis::viridis(1, begin=0.5, option='A'))+
   theme_classic()+
   scale_x_continuous('number of index cases per cluster')+
   scale_y_continuous('density')
@@ -233,6 +242,14 @@ g3 <- ggplot(lik_surface)+
   scale_y_continuous('k')+
   scale_fill_viridis_c('relative likelihood', option='A')
 
+
+plot_data <- tibble(size=1:max_index) %>%
+             mutate(count=purrr::map_int(size, function(i){
+               sum(d+1==i)
+             }),
+             count_scaled=count/sum(count)
+             )
+
 g4 <- ggplot(sample_dists) +
   geom_segment(aes(x=size, xend=size, group=size, y=min, yend=max), 
                alpha=0.5, lwd=1) +
@@ -241,6 +258,8 @@ g4 <- ggplot(sample_dists) +
   geom_segment(aes(x=size, xend=size, group=size, y=p75, yend=p25), 
                alpha=0.5, lwd=4) +
   geom_point(aes(x=size, y=p50), size=2) +
+  geom_line(aes(x=size, y=count_scaled), data=plot_data,
+            color=viridis::viridis(1, begin=0.5, option='A'))+
   theme_classic()+
   scale_x_continuous('number of index cases per cluster')+
   scale_y_continuous('density') 
@@ -480,6 +499,13 @@ g2 <- ggplot(sample_dists_NiV_plot) +
         
 cowplot::plot_grid(g1, g2, nrow=2)
 print(NiV_posterior[1,])
+print(sum(NiV_counts$observed/c(NiV_posterior$p50, 
+                          rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))))
+print(sum(NiV_counts$observed/c(NiV_posterior$p25, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))))
+print(sum(NiV_counts$observed/c(NiV_posterior$p75, 
+                                rep(1, times=nrow(NiV_counts)-nrow(NiV_posterior)))))
+print(sum(NiV_counts$observed))
 
 
 lik_surface_HeV <- as_tibble(expand_grid(alpha=seq(0,3,.001),
